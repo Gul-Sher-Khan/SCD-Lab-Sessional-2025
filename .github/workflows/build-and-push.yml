@@ -26,41 +26,41 @@ jobs:
       - name: Build and push API Gateway
         uses: docker/build-push-action@v4
         with:
-          context: ./Cafe_Manangement_System/api-gateway
+          context: ./Cafe_Management_System/api-gateway
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ secrets.DOCKER_USERNAME }}/cafe-api-gateway:latest
 
       - name: Build and push Menu Service
         uses: docker/build-push-action@v4
         with:
-          context: ./Cafe_Manangement_System/menu-services
+          context: ./Cafe_Management_System/menu-services
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ secrets.DOCKER_USERNAME }}/cafe-menu-service:latest
 
       - name: Build and push Order Service
         uses: docker/build-push-action@v4
         with:
-          context: ./Cafe_Manangement_System/order-services
+          context: ./Cafe_Management_System/order-services
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ secrets.DOCKER_USERNAME }}/cafe-order-service:latest
 
       - name: Build and push Payment Service
         uses: docker/build-push-action@v4
         with:
-          context: ./Cafe_Manangement_System/payment-services
+          context: ./Cafe_Management_System/payment-services
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ secrets.DOCKER_USERNAME }}/cafe-payment-service:latest
 
       - name: Build and push Inventory Service
         uses: docker/build-push-action@v4
         with:
-          context: ./Cafe_Manangement_System/inventory-services
+          context: ./Cafe_Management_System/inventory-services
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ secrets.DOCKER_USERNAME }}/cafe-inventory-service:latest
 
       - name: Build and push Customer Service
         uses: docker/build-push-action@v4
         with:
-          context: ./Cafe_Manangement_System/customer-services
+          context: ./Cafe_Management_System/customer-services
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ secrets.DOCKER_USERNAME }}/cafe-customer-service:latest
